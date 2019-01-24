@@ -1,0 +1,471 @@
+.wrapper {
+	width: 100%;
+	overflow: hidden;
+}
+
+.container {
+	max-width: 1366px;
+	padding: 0 10px;
+	margin: 0 auto;
+
+	@include media('>bp540') {
+		padding: 0 35px;
+	}
+}
+
+.dflex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+body {
+	background: #fff;
+	font-family: 'Karla', sans-serif;
+	color: #494949;
+	font-size: 16px;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+h3 {
+	font-size: 40px;
+	font-weight: 400;
+	color: #494949;
+	text-align: center;
+
+	@include media('>bp540') {
+		font-size: 56px;
+	}
+
+
+	@include media('>tablet') {
+		text-align: left;
+		font-size: 46px;
+	}
+}
+
+.btn {
+	padding: 18px 30px;
+	border: 1px solid #494949;
+	max-width: 100%;
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+	font-size: 16px;
+	transition: background 0.2s, color 0.2s;
+
+	@include media('>bp540') {
+		font-size: 32px;
+		padding: 32px 30px;
+	}
+
+	@include media('>tablet') {
+		max-width: 175px;
+		padding: 18px 30px;
+		font-size: 16px;
+	}
+
+	&:hover {
+		background: rgba(0,0,0, 0.2);
+		color: #000;
+	}
+
+	i {
+		font-size: 20px;
+	}
+}
+
+.slider-section {
+	padding: 45px 0 0 0;
+
+	@include media('>bp540') {
+		padding: 107px 0 0 0;
+	}
+
+	@include media('>tablet') {
+		padding: 45px 0 0 0;
+	}
+}
+
+.slick-dots {
+	display: flex;
+	position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+
+    @include media('>tablet') {
+    	bottom: 3;
+    }
+    
+    li {
+    	border-radius: 50%;
+    	background: #b2bbc4;
+    	width: 12px;
+    	height: 12px;
+    	margin: 0 7px;
+
+    	@include media('>bp540') {
+    		width: 24px;
+    		height: 24px;
+    		margin: 0 16px;
+    	}
+
+    	@include media('>tablet') {
+			width: 12px;
+    		height: 12px;
+    		margin: 0 7px;
+    	}
+
+    	&.slick-active {
+    		background: #222222;
+    	}
+
+    	button {
+    		opacity: 0;
+    	}
+    }
+}
+
+.slick-arrow {
+	display: none!important;
+}
+
+.slider-shoes {
+	padding: 0 0 45px;
+
+	@include media('>bp540') {
+		padding: 0 0 120px;
+	}
+
+	@include media('>tablet') {
+		padding: 0;
+	}
+}
+
+.slide-content {
+	display: block;
+
+	@include media('>tablet') {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.slide__caption-mob {
+		display: block;
+		max-width: 450px;
+		margin: 0 auto 20px;
+
+		@include media('>tablet') {
+			display: none;
+		}
+	}
+	
+	.slide__img-holder {
+		display: block;
+    	margin: 0 auto;
+
+    	@include media('>bp540') {
+    		display: flex;
+			justify-content: center;
+    		flex-grow: 1;
+    		max-height: 570px;
+    	}
+
+    	@include media('>tablet') {
+    		justify-content: flex-end;
+    		margin: 0;
+    	}
+	}
+
+	.slide__text {
+		max-width: 100%;
+		font-size: 32px;
+
+		@include media('>tablet') {
+			max-width: 445px;
+			font-size: 16px;
+		}
+
+		.slide__caption {
+			font-weight: 400;
+			display: none;
+
+			@include media('>tablet') {
+				display: block;
+			}
+		}
+
+		.slide__btn {
+			margin: 18px 0 0 0;
+
+			@include media('>tablet') {
+				margin: 0;
+				max-width: 200px;
+			}
+		}
+	}
+
+}
+
+
+.section-fit {
+	padding: 32% 0 0 0; 
+
+	@include media('>tablet') {
+		padding: 100px 0 0 0; 
+	}
+}
+
+
+.fit-holder, .fit__shop {
+	display: block;
+
+	@include media('>tablet') {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+}
+
+.fit-holder {
+	padding: 0;
+
+	@include media('>tablet') {
+		padding: 0 50px 0 80px;
+	}
+}
+
+.fit__caption {
+	margin: 0 0 45px;
+
+	@include media('>tablet') {
+		margin: 0;
+	}
+}
+
+.fit__shop {
+	align-items: flex-end;
+	width: 100%;
+	@include media('>tablet') {
+		width: 66%;
+	}
+}
+
+.fit__col {
+	text-align: center;
+
+	.img-holder {
+		max-width: 380px;
+		padding:0 0 87px 0;
+		margin: 0 auto;
+
+		@include media('>tablet') {
+			max-width: 335px;
+			padding:0 0 70px 0;
+		}
+
+		.fit__img_width {
+			width: 85%;
+			margin: 0 0 18px;
+
+			@include media('>tablet') {
+				margin: 0 0 18px;
+			}
+		}
+	}
+
+	.fit__btn {
+		margin: 0 0 15%;
+		
+		@include media('>tablet') {
+			margin: 0;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			line-height: 1;
+			margin: 0 auto;
+			padding: 13px 30px;
+		}
+
+
+
+		.fit__btn-icon {
+			width: 20px;
+			display: none;
+
+			@include media('>tablet') {
+				display: inline-block;
+			}
+
+			&.rotate {
+				transform: rotate(180deg)
+			}
+		}
+	}
+}
+
+.about {
+	padding: 45px 0 0 0;
+
+	@include media('>bp540') {
+		padding: 150px 0 0 0;
+	}
+
+	@include media('>tablet') {
+		padding: 85px 0 0 0;
+	}
+
+	.container {
+
+		padding: 0;
+
+		/* @include media('>tablet') {
+			padding: 0 35px;
+		} */
+	}
+}
+
+.about__caption {
+	padding: 0;
+	margin: 0 auto;
+
+	@include media('>bp540') {
+		padding: 0 0 0 35px;
+		margin: 0;
+	}
+
+	@include media('>tablet') {
+		padding: 0
+	}
+}
+
+.about__info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 0;
+
+	@include media('>tablet') {
+		flex-wrap: nowrap;
+		padding: 0 0 0 35px
+	}
+
+	@include media('>desktop') {
+		padding: 0 0 0 117px
+	}
+} 
+
+.about__items {
+	max-width: 100%;
+	margin: 0 15px;
+	font-size: 16px;
+
+	@include media('>bp540') {
+		max-width: 310px;
+		margin: 0 35px 0 0;
+		font-size: 32px;
+	}
+	
+	@include media('>tablet') {
+		margin: 0;
+		max-width: 190px;
+		font-size: 16px;
+		padding: 0 10px 0 0;
+		line-height: 1.5;
+	}
+
+	h5 {
+		font-size: 24px;
+		color: #b2bbc4;
+		font-weight: 400;
+		text-transform: uppercase;
+		margin: 0 0 6px;
+		line-height: 1.4;
+
+		@include media('>tablet') {
+			text-transform: none;
+			font-size: 20px;
+			margin: 0 0 20px;
+		}
+	}
+
+	address {
+		font-style: normal;
+	}
+
+	.about__phone {
+		display: inline-block;
+		margin: 43px 0 37px;
+
+		@include media('>tablet') {
+			margin: 35px 0;
+		}
+
+		.phone-icon {
+			transform: rotate(90deg);
+			font-size: 20px;
+			color: #b9c2cb;
+			margin: 0 10px 0 0;
+		}
+	}
+
+	strong {
+		font-size: 24px;
+		font-weight: 400;
+		color: #b2bbc4;
+		text-transform: uppercase;
+
+		@include media('>tablet') {
+			font-size: 16px;
+			font-weight: 700;
+			text-transform: none;
+			color: #494949;
+		}
+
+	}
+}
+
+.about__img {
+	width: 100%;
+	margin: 45px 0 0 0;
+
+	@include media('>bp540') {
+		margin: 120px 0 0 0;
+	}
+
+	@include media('>tablet') {
+		width: auto;
+		margin: 0;
+	}
+
+	img {
+		width: 100%;
+	}
+	
+	.about__ing-mob {
+		display: block;
+
+		@include media('>tablet') {
+			display: none;
+		}
+	}
+
+	.about__ing-desktop {
+		display: none;
+
+		@include media('>tablet') {
+			display: block;
+		}
+	}
+
+}
+
+
